@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+}
+
+header .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 70px;
+}
+
+header .max-width .logo {
+    font-size: 1.5rem;
+}
+
+header .max-width .logo span {
+    font-size: 2.5rem;
+}
+
+nav .menu {
+    display: block;
+}
+
+nav .menu li {
+    display: inline-block;
+}
+
+nav .menu li .link {
+    text-decoration: none;
+    margin-left: 25px;
+    color: #000;
+    transition: .4s;
+}
+
+nav .menu li .link.active {
+    color: red;
+}
+
+.home {
+    background-image: url('img/backgroung1.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 90vh;
+    display: flex;
+}
+
+.home .max-width {
+    margin: auto 0 auto 130px;
+}
+
+.home .max-width .info a {
+    text-decoration: none;
+    color: #fff;
+    background: #000;
+    padding: 13px 20px;
+    border-radius: 15px;
+    border: 2px solid #000;
+    transition: .4s all;
+}
+
+.home .max-width .info a:hover {
+    color: #000;
+    background: none;
+}
+
+.home .max-width .info .title {
+    font-size: 3rem;
+}
+
+.home .max-width .info .text {
+    padding: 25px 0;
+}
+
+.home .max-width .info .text .text-1 {}
