@@ -1,55 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Oswald:wght@300;400&family=Poppins:wght@200;300;400&family=Roboto+Mono:wght@100&family=Roboto:wght@100;700&display=swap');
+:root {
+    --color-1: #e3e5eb;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-header {
-    width: 100%;
-    position: fixed;
-}
-
-header .max-width {
+.row {
     display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    padding: 20px 65px;
+    left: 0;
+    right: 0;
+}
+
+.align-items-center {
     align-items: center;
+}
+
+.container .logo {
+    width: 100px;
+}
+
+.container .logo img {
+    width: 200px;
+}
+
+.justify-content-between {
     justify-content: space-between;
-    padding: 20px 70px;
 }
 
-header .max-width .logo {
-    font-size: 1.5rem;
+.header {
+    padding: 12px 0;
+    line-height: 1.5;
 }
 
-header .max-width .logo span {
-    font-size: 2.5rem;
-}
-
-nav .menu {
-    display: block;
-}
-
-nav .menu li {
+.header .nav ul li {
     display: inline-block;
-}
-
-nav .menu li .link {
-    text-decoration: none;
     margin-left: 25px;
-    color: #000;
-    transition: .4s;
 }
 
-nav .menu li .link.active {
-    color: red;
+.header .nav ul li .link {
+    text-decoration: none;
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    transition: .5s;
 }
+
+.header .nav ul li .active {
+    color: rgb(172, 47, 47);
+}
+
+.btn {
+    cursor: pointer;
+    display: none;
+}
+
+.btn i {
+    font-size: 25px;
+}
+
+
+/* home */
 
 .home {
-    background-image: url('img/backgroung1.png');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 90vh;
     display: flex;
+    background-image: url('img/Sans\ titre-1.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
 }
 
 .home .max-width {
@@ -75,8 +99,101 @@ nav .menu li .link.active {
     font-size: 3rem;
 }
 
-.home .max-width .info .text {
-    padding: 25px 0;
+.home .max-width .info .title span {
+    font-size: 4.5rem;
 }
 
-.home .max-width .info .text .text-1 {}
+.home .max-width .info .text {
+    padding-bottom: 25px;
+}
+
+.home .max-width .info .text .text-1 {
+    font-size: 16px;
+}
+
+.release {
+    opacity: 0;
+    transition: 3s all;
+}
+
+.release-show {
+    opacity: 1;
+    transform: translateY(-25px);
+}
+
+@media(max-width:991px) {
+    .container {
+        padding: 10px 50px;
+    }
+    .btn {
+        display: block;
+    }
+    .header .nav {
+        width: 100%;
+        padding: 0;
+        max-height: 0px;
+        overflow: hidden;
+        visibility: hidden;
+        transition: all 0.5s ease;
+    }
+    .header .nav.open {
+        visibility: visible;
+    }
+    .header .nav ul {
+        padding: 12px 15px 0;
+        margin-top: 12px;
+        background: #7a7f849a;
+        border-top: 1px solid rgba(227, 227, 227, 0.2);
+    }
+    .header .nav ul li {
+        display: block;
+        margin: 0;
+    }
+    .header .nav ul li a {
+        color: #000;
+    }
+    .home .max-width {
+        margin: auto 0 auto 100px;
+    }
+    .home .max-width .info a {
+        font-size: 14px;
+        padding: 10px 17px;
+    }
+    .home .max-width .info .title {
+        font-size: 2.7rem;
+    }
+    .home .max-width .info .title span {
+        font-size: 3.5rem;
+    }
+    .home .max-width .info .text {
+        padding: 25px 0;
+    }
+    .home .max-width .info .text .text-1 {
+        font-size: 14px;
+    }
+}
+
+@media(max-width:466px) {
+    .container {
+        padding: 10px 50px;
+    }
+    .home .max-width {
+        margin: auto 0 auto 70px;
+    }
+    .home .max-width .info a {
+        padding: 10px 17px;
+        font-size: 13px;
+    }
+    .home .max-width .info .title {
+        font-size: 2.5rem;
+    }
+    .home .max-width .info .title span {
+        font-size: 3rem;
+    }
+    .home .max-width .info .text {
+        padding: 25px 0;
+    }
+    .home .max-width .info .text .text-1 {
+        font-size: 13px;
+    }
+}
